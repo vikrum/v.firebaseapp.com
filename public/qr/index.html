@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" manifest="qr.appcache">
+<head>
+  <title>qr</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="qrcode.js"></script>
+</head>
+<body>
+
+<center>
+<input id="qrInput" type="text" value="" style="width:80%" />
+<br>
+<div id="qrcode"></div>
+</center>
+
+<script type="text/javascript">
+var qrcode = new QRCode("qrcode");
+document.getElementById('qrInput').addEventListener('change', function(e) {
+    var elText = e.target;
+    if (elText.value) {
+      qrcode.makeCode(elText.value);
+    }
+});
+</script>
+
+</body>
+</html>
