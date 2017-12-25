@@ -2,7 +2,8 @@
   "hosting": {
     "public": "public",
     "rewrites": [ {
-      "source": "/req", "function": "req"
+      "source": "/req", "function": "req",
+      "source": "/rand", "function": "rand"
     } ]
   }
 }
